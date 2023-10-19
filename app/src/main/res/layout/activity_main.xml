@@ -1,0 +1,119 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_background"
+        android:scaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-180dp"
+            android:fontFamily="@font/playfair_display"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/measure_glycemia"
+            android:textColor="@color/black"
+
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAgeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="clip_horizontal"
+            android:text="    Your Age :"
+            android:layout_marginTop="80dp"
+            android:textSize="24sp" />
+
+        <SeekBar
+            android:id="@+id/sbAge"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:max="120"
+            android:text="@string/age"
+            android:layout_below="@id/tvAgeLabel" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Are you fasting?"
+            android:gravity="center"
+            android:layout_below="@id/sbAge"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="100dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sbAge"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:id="@+id/rbtOui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Oui"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:id="@+id/rbtNon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtGlycemia"
+            android:layout_width="match_parent"
+            android:hint="@string/val_glycemia"
+            android:inputType="numberDecimal"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/btnConsulter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calculer"
+            android:text="CONSULTER"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</FrameLayout>
