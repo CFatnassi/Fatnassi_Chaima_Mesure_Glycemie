@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Fatnassi_Chaima_Mesure_Glycemie</string>
     <string name="measure_glycemia">Mesure de niveau de glycémie</string>
-    <string name="val_glycemia">Valeur mesurée (en mmol/l)</string>
+    <string name="val_glycemia">Measured value (in mmol/l)</string>
     <string name="age">Votre age : </string>
     <string name="oui">Oui</string>
     <string name="non">Non</string>

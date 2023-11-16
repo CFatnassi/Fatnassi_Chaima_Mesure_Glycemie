@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
-    <!-- Background Image -->
+
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/app_background"
-        android:scaleType="centerCrop" />
+        android:layout_height="870dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_background" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
+        android:layout_height="870dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <TextView
@@ -32,65 +32,71 @@
             android:padding="30dp"
             android:text="@string/measure_glycemia"
             android:textColor="@color/black"
-
             android:textSize="34sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvAgeLabel"
+            android:id="@+id/AgeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:gravity="clip_horizontal"
-            android:text="    Your Age :"
             android:layout_marginTop="80dp"
+            android:gravity="clip_horizontal"
+            android:text="    Your Age : 0"
             android:textSize="24sp" />
 
         <SeekBar
             android:id="@+id/sbAge"
             android:layout_width="379dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/AgeLabel"
             android:layout_marginTop="15dp"
             android:max="120"
-            android:text="@string/age"
-            android:layout_below="@id/tvAgeLabel" />
+            android:text="@string/age" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/line_shape" />
 
         <TextView
+            android:id="@+id/fasting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  Are you fasting?"
-            android:gravity="center"
             android:layout_below="@id/sbAge"
             android:layout_centerHorizontal="true"
-            android:textSize="24sp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="100dp"/>
+            android:layout_marginEnd="100dp"
+            android:gravity="center"
+            android:text="  Are you fasting?"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/sbAge"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true">
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/rbtOui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Oui"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:layout_marginStart="20dp"
                 android:layout_marginEnd="110dp"
-                android:layout_marginStart="20dp"/>
+                android:checked="true"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/rbtNon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Non"
+                android:text="No"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -99,21 +105,33 @@
         <EditText
             android:id="@+id/edtGlycemia"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:hint="@string/val_glycemia"
             android:inputType="numberDecimal"
-            android:textSize="25sp"
-            android:layout_marginTop="20dp"
-            android:layout_height="50dp" />
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/btnConsulter"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape"
             android:onClick="calculer"
+            android:outlineAmbientShadowColor="@color/black"
             android:text="CONSULTER"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnConsulter"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Result:"
+            android:textSize="24sp" />
 
     </LinearLayout>
 </FrameLayout>

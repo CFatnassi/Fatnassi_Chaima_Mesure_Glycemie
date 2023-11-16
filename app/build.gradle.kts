@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.fatnassi_chaima_mesure_glycemie"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.fatnassi_chaima_mesure_glycemie"
