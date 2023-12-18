@@ -7,13 +7,31 @@
     android:background="@drawable/home"
     tools:context=".View.HomeActivity"
     >
+        <!-- Login EditText -->
+        <EditText
+            android:id="@+id/edtLogin"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="480dp"
+            android:hint="@string/enter_login"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+        <!-- Password EditText -->
+        <EditText
+            android:id="@+id/edtMdp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="540dp"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:textSize="25sp" />
         <Button
             android:id="@+id/btnConsultation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="75dp"
-            android:layout_centerHorizontal="true"
             android:background="@drawable/custom_button_background"
             android:elevation="8dp"
             android:paddingStart="20dp"
@@ -23,5 +41,6 @@
             android:stateListAnimator="@null"
             android:text="CONSULTATION"
             android:textColor="@android:color/white"
+            android:layout_marginLeft="150dp"
             android:textSize="27sp" />
 </RelativeLayout>

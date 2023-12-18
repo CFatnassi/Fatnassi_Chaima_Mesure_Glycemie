@@ -5,5 +5,7 @@
     <string name="age">Votre age : </string>
     <string name="oui">Oui</string>
     <string name="non">Non</string>
+    <string name="enter_login">Username</string>
+    <string name="enter_password">Password</string>
 
 </resources>
