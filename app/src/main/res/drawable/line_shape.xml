@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
     <stroke
         android:width="2dp"
-        android:color="@color/black"
+        android:color="@color/colorDGrey"/><!-- Adjust the width of the line as needed -->
+         <!-- Adjust the color of the line as needed -->
 
-    />
 </shape>
